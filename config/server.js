@@ -6,3 +6,5 @@ module.exports = ({ env }) => ({
     keys: env.array('APP_KEYS'),
   },
 });
+
+keys: [['hufaLk7DhIsJ5UddAceHuQ','uP1xoPCD0qJDBh3T2371sw']]
