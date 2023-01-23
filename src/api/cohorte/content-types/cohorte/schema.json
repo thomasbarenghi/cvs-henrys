@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cohortes",
+  "info": {
+    "singularName": "cohorte",
+    "pluralName": "cohortes",
+    "displayName": "cohorte",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codigo": {
+      "type": "string"
+    },
+    "claveCohorte": {
+      "type": "uid"
+    }
+  }
+}

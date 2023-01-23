@@ -4,7 +4,7 @@
   "info": {
     "singularName": "alumno",
     "pluralName": "alumnos",
-    "displayName": "alumno",
+    "displayName": "Alumno",
     "description": ""
   },
   "options": {
@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Nombre_completo": {
+    "nombreCompleto": {
       "type": "string"
     },
     "fotoPerfil": {
@@ -29,11 +29,29 @@
     "urlLinkedin": {
       "type": "string"
     },
-    "usuario": {
+    "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "alumno"
+    },
+    "comunidades": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::comunidad.comunidad",
+      "inversedBy": "alumnos"
+    },
+    "comunidadesAdministradas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comunidad.comunidad",
+      "mappedBy": "adminComunidad"
+    },
+    "postsAlumno": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post-comunidad.post-comunidad",
+      "mappedBy": "autor"
     }
   }
 }

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts_comunidades",
+  "info": {
+    "singularName": "post-comunidad",
+    "pluralName": "posts-comunidades",
+    "displayName": "Post_comunidad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "contenido": {
+      "type": "richtext"
+    },
+    "portada": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "comunidad": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comunidad.comunidad",
+      "inversedBy": "postsComunidad"
+    },
+    "autor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::alumno.alumno",
+      "inversedBy": "postsAlumno"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

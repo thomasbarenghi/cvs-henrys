@@ -63,11 +63,28 @@
       "inversedBy": "users",
       "configurable": false
     },
+    "Nombre_completo": {
+      "type": "string"
+    },
+    "fotoPerfil": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "urlLinkedin": {
+      "type": "string"
+    },
     "alumno": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::alumno.alumno",
-      "mappedBy": "usuario"
+      "mappedBy": "users_permissions_user"
     }
   }
 }
